@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout y Rutas</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Estilo de header */
+        header {
+            background-color: rgb(113, 186, 255);
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+
+        /* Crear 2 columnas con la misma posición en la fila */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px;
+            /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: rgb(110, 240, 218);
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="logo.png" alt="logo" width="100" >
+        <h2>Pasteleria Alcazar</h2>
+    </header>
+
+    <h2>Datos personales</h2>
+    <label for="correo1">Correo</label><br>
+    <input type="email" id="correo1" name="correo1"><br><br>   
+    
+    <label for="tel1">Input de Teléfono</label><br>
+    <input type="tel" id="tel1" name="tel1" maxlength="10"><br><br>
+
+    <label for="tel1">Descripción general del pastel</label><br>
+    <input type="tel" id="tel1" name="tel1" maxlength="10"><br><br>
+    
+
+    <label for="tel1">Adornos</label><br>
+    <input type="tel" id="tel1" name="tel1" maxlength="10"><br><br>
+
+     
+    
+
+
+     <h2>Seleccion de sabores</h2>
+     <input type="checkbox" id="topping1" name="topping1" value="Cebolla">
+     <label for="topping1">Fresa</label><br>
+     <input type="checkbox" id="topping2" name="topping2" value="Cilantro">
+     <label for="topping2">Chocolate</label><br>
+     <input type="checkbox" id="topping3" name="topping3" value="Salsa">
+     <label for="topping3">Vainilla</label><br><br>
+
+    <footer>
+        <p>Río Lerma 19-2
+            Río Lerma 19-2
+            Cuauhtémoc
+            Ciudad de México, Ciudad de México 06500
+            México</p>
+    </footer>
+
+</body>
+
+</html>
